@@ -70,7 +70,7 @@ public class AppController {
 
     @FXML
     void initialize() {
-        SrchBtn.setOnAction(actionEvent -> {
+        SrchBtn.setOnAction(actionEvent -> { // Search for jobs
             if(!srchField.getText().isEmpty()){
                 ProductQuery = srchField.getText().replace(" ","+");
                 FinalURL = BaseURL + ProductQuery.replace(" ","");
@@ -82,7 +82,7 @@ public class AppController {
                 });
             }
         });
-        nextBtn.setOnAction(actionEvent -> {
+        nextBtn.setOnAction(actionEvent -> { // Next job
             if(JobCounter+1 <= Result.size()-1){
                 JobCounter++;
                 jobNameTextField.clear();
@@ -95,7 +95,7 @@ public class AppController {
                 System.out.println("Out of range");
             }
         });
-        PrevBtn.setOnAction(actionEvent -> {
+        PrevBtn.setOnAction(actionEvent -> { // Previous job
             if(JobCounter-1 >= 0){
                 JobCounter--;
                 jobNameTextField.clear();
@@ -108,14 +108,14 @@ public class AppController {
                 System.out.println("Out of range");
             }
         });
-        WriteToExcelBtn.setOnAction(actionEvent -> {
+        WriteToExcelBtn.setOnAction(actionEvent -> { // Create or replace excel file with data
             if(!Result.isEmpty()){
                 ExcelWriter.toExcel(Result);
             }else{
                 System.out.println("Empty array.");
             }
         });
-        WriteToDBBtn.setOnAction(actionEvent -> {
+        WriteToDBBtn.setOnAction(actionEvent -> { // Add jobs to database
             if(!Result.isEmpty()){
                 DBWriter.saveUnitsToDatabase(Result);
             }else{
@@ -124,7 +124,7 @@ public class AppController {
         });
         loadExchangeRate();
     }
-    public void loadExchangeRate() {
+    public void loadExchangeRate() { // Get exchange rate from PrivatBank api
         new Thread(()->{
             List<String> exchRate = new ArrayList<>();
             try {

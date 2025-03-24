@@ -9,14 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Parser {
-    String WebURL;
-    public void init() throws Exception{
-        //base url = https://www.work.ua/jobs-it/
-        Document global = Jsoup.connect(WebURL).get();
-
-    }
     @SneakyThrows
-    public Unit ParseUnit(String URL){
+    public Unit ParseUnit(String URL){ // Get job name, description and salary
         Document global = Jsoup.connect(URL).get();
         String jobName = global.getElementById("h1-name").text();
         String aboutJob = global.getElementById("job-description").text();
@@ -26,7 +20,7 @@ public class Parser {
         return unit;
     }
     @SneakyThrows
-    public List<Unit> ParseURLs(String baseURL){
+    public List<Unit> ParseURLs(String baseURL){// Get jobs name, description and salary from first page
         String mainPageURL = "https://www.work.ua";
         String finalLink;
         Document global = Jsoup.connect(baseURL).get();
@@ -47,8 +41,5 @@ public class Parser {
             }
         }
         return result;
-        //#pjax-jobs-list
     }
-
-    //base url = https://www.work.ua/jobs-it/ ... <- job link
 }

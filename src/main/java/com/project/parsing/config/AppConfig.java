@@ -9,5 +9,5 @@ public class AppConfig {
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();
-    }
+    } // With this I can fetch data from api
 }

@@ -19,10 +19,9 @@ public class JavaFXApplication extends Application {
     }
     @Override
     public void init() throws Exception {
-        // Запускаем Spring Boot
         springContext = SpringApplication.run(JavaFXApplication.class);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main-view.fxml"));
-        fxmlLoader.setControllerFactory(springContext::getBean); // Интеграция Spring
+        fxmlLoader.setControllerFactory(springContext::getBean);
         rootNode = fxmlLoader.load();
     }
     @Override

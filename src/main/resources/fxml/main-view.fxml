@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="760.0" style="-fx-background-color: #9e959d;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.parsing.controller.AppController">
+   <children>
+      <AnchorPane prefHeight="80.0" prefWidth="760.0" style="-fx-background-color: #7d757c;">
+         <children>
+            <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Work.ua Parser" textAlignment="CENTER" wrappingWidth="138.13671875">
+               <font>
+                  <Font name="Candara Bold" size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="srchField" layoutX="179.0" layoutY="40.0" prefHeight="25.0" prefWidth="400.0" />
+            <Text layoutX="208.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введіть посаду що хочете знайти">
+               <font>
+                  <Font name="Candara Light" size="24.0" />
+               </font>
+            </Text>
+                        <Text layoutX="649.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="716.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="€">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="dollarToGrn" layoutX="630.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <Text fx:id="EuroToGrn" layoutX="697.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="jobNameTextField" wrapText="true" editable="false" layoutX="180.0" layoutY="100.0" prefHeight="50.0" prefWidth="400.0" />
+      <TextArea fx:id="aboutJobTextField" wrapText="true" editable="false" layoutX="180.0" layoutY="170.0" prefHeight="104.0" prefWidth="400.0" />
+      <TextArea fx:id="salaryTextField" wrapText="true" editable="false" layoutX="180.0" layoutY="295.0" prefHeight="36.0" prefWidth="400.0" />
+      <Button fx:id="nextBtn" layoutX="421.0" layoutY="355.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Наступний">
+         <font>
+            <Font name="Candara" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="PrevBtn" layoutX="239.0" layoutY="354.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Попередній">
+         <font>
+            <Font name="Candara" size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutY="80.0" prefHeight="320.0" prefWidth="151.0" style="-fx-background-color: #7d757c;">
+         <children>
+            <Text layoutX="11.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Запропонована посада" textAlignment="CENTER" wrappingWidth="128.56640625">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="11.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Опис посади" textAlignment="CENTER" wrappingWidth="128.56640625" y="20.0">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="11.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Запропонована заробітна плата" textAlignment="CENTER" wrappingWidth="128.56640625">
+               <font>
+                  <Font name="Candara" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button fx:id="SrchBtn" layoutX="350.0" layoutY="355.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="Пошук">
+         <font>
+            <Font name="Candara" size="14.0" />
+         </font>
+      </Button>
+   </children>
+   <AnchorPane layoutX="609.0" layoutY="80.0" prefHeight="320.0" prefWidth="151.0" style="-fx-background-color: #7d757c;">
+         <children>
+            <Button fx:id="WriteToExcelBtn" layoutX="26.0" layoutY="50.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" text="Запис до Excel" textAlignment="CENTER" />
+            <Button fx:id="WriteToDBBtn" layoutX="26.0" layoutY="180.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" text="Запис до бази даних" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </AnchorPane>
+</AnchorPane>

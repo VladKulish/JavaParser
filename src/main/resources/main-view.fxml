@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx/21.0.6" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.project.parsing.controller.AppController">
+
+    <!-- Поле поиска -->
+    <TextField fx:id="srchField" promptText="Search" />
+
+    <!-- Кнопка поиска -->
+    <Button fx:id="SrchBtn" text="Search" />
+
+    <!-- Поле с именем работы -->
+    <TextArea fx:id="jobNameTextField" promptText="Job Name" wrapText="true" />
+
+    <!-- Поле с описанием работы -->
+    <TextArea fx:id="aboutJobTextField" promptText="About the Job" wrapText="true" />
+
+    <!-- Поле с зарплатой -->
+    <TextArea fx:id="salaryTextField" promptText="Salary" wrapText="true" />
+
+    <!-- Кнопки навигации -->
+    <Button fx:id="PrevBtn" text="Previous" />
+    <Button fx:id="nextBtn" text="Next" />
+
+
+</AnchorPane>

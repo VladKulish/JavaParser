@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class WriteToExcel {
-    public static final String filePath = "src/main/java/com/project/parsing/excel/jobs.xlsx";
+    public static final String filePath = "./jobs.xlsx";
     public void toExcel(List<Unit> units){
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet("Result");

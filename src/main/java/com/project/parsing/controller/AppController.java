@@ -127,8 +127,9 @@ public class AppController {
     public void loadExchangeRate() { // Get exchange rate from PrivatBank api
         new Thread(()->{
             List<String> exchRate = new ArrayList<>();
+            String ApiURL = "https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5";
             try {
-                exchRate=service.fetchDataFromURL("https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5");
+                exchRate=service.fetchDataFromURL(ApiURL);
             } catch (JsonProcessingException e) {
                 throw new RuntimeException(e);
             }
